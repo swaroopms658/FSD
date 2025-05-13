@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        article {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        aside {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-left: 4px solid #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <aside>
+            <h3>What are localStorage and sessionStorage?</h3>
+            <p>
+                <strong>localStorage</strong> and <strong>sessionStorage</strong> are web storage APIs provided by modern browsers. 
+                They allow developers to store key-value pairs in a user's browser.
+            </p>
+            <ul>
+                <li><strong>localStorage:</strong> Data persists even after the browser is closed and reopened. It is used for storing data that needs to be available across sessions.</li>
+                <li><strong>sessionStorage:</strong> Data is cleared when the browser tab is closed. It is used for storing data that is only needed for the current session.</li>
+            </ul>
+        </aside>
+    </article>
+
+    <script>
+        // JavaScript to handle form submission and store data in localStorage
+        const form = document.getElementById('feedbackForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            const name = document.getElementById('name').value;
+            const feedback = document.getElementById('feedback').value;
+
+            // Store data in localStorage
+            localStorage.setItem('name', name);
+            localStorage.setItem('feedback', feedback);
+
+            // Display a success message
+            alert('Your feedback has been saved in localStorage!');
+        });
+    </script>
+</body>
+</html>

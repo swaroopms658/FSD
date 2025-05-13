@@ -1,0 +1,24 @@
+p{
+    color: #f0eeee;
+}
+body {
+    background-color: rgb(87, 132, 143);
+  }
+h1{
+    color:white;
+}
+#first{
+    text-align: center;
+}
+.intro{
+    text-transform: capitalize;
+}
+table, th, td {
+    border:1px solid black;
+  }
+  .movies{
+    color: #f0eeee;
+  }
+a{
+    color: #e6dddd;
+}
