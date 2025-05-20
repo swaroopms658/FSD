@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Dashboard</title>
+  </head>
+  <body>
+    <!-- Header and Navigation -->
+    <header>
+      <h1>Student Dashboard</h1>
+      <nav>
+        <a href="#">Home</a> | <a href="#">Subjects</a> |
+        <a href="#">Attendance</a> |
+        <a href="#">Feedback</a>
+      </nav>
+    </header>
+
+    <!-- Sidebar with Student Info -->
+    <aside>
+      <h2>Student Profile</h2>
+      <p><strong>Name:</strong> Jane Doe</p>
+      <p><strong>Reg No:</strong> 123456789</p>
+      <p><strong>Semester:</strong> 4</p>
+      <figure>
+        <img src="student-photo.jpg" alt="Student Photo" width="150" />
+        <figcaption>Jane Doe</figcaption>
+      </figure>
+    </aside>
+
+    <!-- Academic Performance Section -->
+    <section>
+      <h2>Academic Performance</h2>
+
+      <article>
+        <h2>Mathematics</h2>
+        <time datetime="2025-03-10">March 10, 2025</time><br />
+        <label>Assignment Completion:</label>
+        <progress value="3" max="5"></progress><br />
+        <label>Test Score:</label>
+        <meter value="75" min="0" max="100" low="40" high="90" optimum="95">
+          75</meter
+        ><br />
+        <button>Show Comments</button>
+        <details>
+          <summary>Teacher Feedback</summary>
+          Great progress in problem-solving. Practice more on calculus.
+        </details>
+      </article>
+
+      <article>
+        <h2>Science</h2>
+        <time datetime="2025-03-15">March 15, 2025</time><br />
+        <label>Assignment Completion:</label>
+        <progress value="4" max="5"></progress><br />
+        <label>Test Score:</label>
+        <meter value="85" min="0" max="100" low="40" high="90" optimum="95">
+          85</meter
+        ><br />
+        <button>Show Comments</button>
+        <details>
+          <summary>Teacher Feedback</summary>
+          Excellent in experiments. Need more theory revision.
+        </details>
+      </article>
+    </section>
+
+    <!-- Overall Performance Summary -->
+    <section>
+      <h2>Overall Performance</h2>
+      <label>Average Score:</label>
+      <meter value="80" min="0" max="100" low="40" high="90" optimum="95">
+        80</meter
+      ><br />
+      <label>Total Assignment Completion:</label>
+      <progress value="7" max="10"></progress>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Contact: info@college.edu</p>
+      <p>
+        &copy; <time datetime="2025">2025</time> College Name. All rights
+        reserved.
+      </p>
+    </footer>
+  </body>
+</html>
