@@ -32,6 +32,11 @@ h2 {
 ul {
     padding-left: 1.2rem;
 }
+ul li:hover {
+    background: #e3f0ff;
+    transition: background 0.2s;
+    cursor: pointer;
+}
 footer {
     text-align: center;
     padding: 1rem;
@@ -40,4 +45,8 @@ footer {
     margin-top: 2rem;
     border-radius: 0 0 8px 8px;
     font-family: 'Times New Roman', Times, serif;
+}
+footer:hover {
+    filter: brightness(1.1);
+    transition: filter 0.2s;
 }
