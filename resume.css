@@ -1,5 +1,5 @@
 body {
-   font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background: #f7f7f7;
@@ -32,21 +32,37 @@ h2 {
 ul {
     padding-left: 1.2rem;
 }
+ul li {
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    transition: 
+        background 0.2s,
+        box-shadow 0.2s,
+        transform 0.2s;
+}
 ul li:hover {
     background: #e3f0ff;
-    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(15, 101, 194, 0.10);
+    transform: translateY(-2px) scale(1.03);
+    transition: 
+        background 0.2s,
+        box-shadow 0.2s,
+        transform 0.2s;
     cursor: pointer;
 }
 footer {
     text-align: center;
-    padding: 1rem;
-    background: #1067c4;
+    padding: 1.2rem;
+    background: linear-gradient(90deg, #1067c4 60%, #3fa7ff 100%);
     color: #fff;
     margin-top: 2rem;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 12px 12px;
     font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 2px 12px rgba(15, 101, 194, 0.10);
+    letter-spacing: 1px;
 }
 footer:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.12) drop-shadow(0 2px 8px #3fa7ff88);
     transition: filter 0.2s;
 }
