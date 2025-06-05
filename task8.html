@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Debugging Solutions</title>
+    <style>
+        /* 1. Responsive Layout Fix */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 20px;
+            max-width: 100vw;
+            box-sizing: border-box;
+        }
+        .content-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            clear: both;
+        }
+        @media (max-width: 600px) {
+            main {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+        }
+
+        /* 2. Vertical Alignment Fix */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+            margin-top: 2em;
+        }
+        nav img {
+            width: 50px;
+            height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav li {
+            margin-right: 20px;
+        }
+        nav li:last-child {
+            margin-right: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* 3. Button Animation Fix */
+        .animated-btn {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            transition: background-color 0.3s ease-in, transform 0.3s ease;
+            margin: 2em 0;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .animated-btn:hover {
+            background-color: red;
+            transform: scale(1.5);
+        }
+
+        /* 4. Content Overflow Fix */
+        .container {
+            width: 300px;
+            border: 2px solid black;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin: 2em 0;
+        }
+        .content {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 20px;
+            margin: 15px 0;
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Responsive Layout -->
+    <header>
+        <h1>Debugging Exercise</h1>
+    </header>
+    <main>
+        <div class="content-box">
+            <h2>Content Box 1</h2>
+            <p>CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.</p>
+        </div>
+        <div class="content-box">
+            <h2>Content Box 2</h2>
+            <p>CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Debugging Exercise</p>
+    </footer>
+
+    <!-- 2. Vertical Alignment -->
+    <nav>
+        <img src="logo.png" alt="Logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 3. Button Animation -->
+    <div style="text-align:center;">
+        <button class="animated-btn">Hover Me</button>
+    </div>
+
+    <!-- 4. Content Overflow -->
+    <div class="container">
+        <div class="content">Overflowing content</div>
+    </div>
+</body>
+</html>
