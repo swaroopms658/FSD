@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Tasks</title>
+</head>
+<body>
+    <script>
+        // 1. Add Two Numbers
+        let num1 = Number(prompt("Enter the first number:"));
+        let num2 = Number(prompt("Enter the second number:"));
+        alert("Sum: " + (num1 + num2));
+
+        // 2. Check Even or Odd
+        let number = Number(prompt("Enter a number to check even or odd:"));
+        if (number % 2 === 0) {
+            alert(number + " is Even");
+        } else {
+            alert(number + " is Odd");
+        }
+
+        // 3. Calculate the Square of a Number
+        let squareNum = Number(prompt("Enter a number to find its square:"));
+        alert("Square: " + (squareNum * squareNum));
+
+        // 4. Reverse a String
+        let str = prompt("Enter a string to reverse:");
+        let reversed = str.split('').reverse().join('');
+        alert("Reversed string: " + reversed);
+
+        // 5. Get Current Date and Time
+        document.write("<h3>Current Date and Time: " + new Date().toLocaleString() + "</h3>");
+    </script>
+</body>
+</html>
